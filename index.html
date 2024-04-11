@@ -90,8 +90,50 @@
             <button>Submit</button>
         </form>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+
+    <div class="container">
+        <form action="">
+            <label for="text" class="form-label">Text</label>
+            <div class="input-group">
+                <div class="input-group-text">Left text</div>
+                <input type="text" name="" id="text" class="form-control">
+                <div class="input-group-text">Middle text</div>
+                <input type="text" name="" id="text" class="form-control">
+                <div class="input-group-text">Right text</div>
+                <button class="btn btn-primary">Sub</button>
+            </div>
+        </form>
+    </div>
+
+    <div class="container">
+        <form action="" novalidate>
+            <div class="form-floating">
+                <input type="email" name="" id="email" class="form-control" placeholder="anything">
+                <label for="email">Email</label>
+                <div class="invalid-feedback">Invalid text</div>
+                <div class="valid-feedback">Valid text</div>
+            </div>
+            <button>Submit</button>
+        </form>
+    </div>
+    <div class="container">
+        <button class="btn btn-primary">Click here</button>
+        <button class="btn btn-outline-primary">Click here</button>
+        <button class="btn btn-link">Click here</button>
+        <a class="btn btn-primary" href="">cllc</a>
+    </div>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
+    </script> -->
+    <script>
+        const form = document.querySelectorAll("form")
+        form.addEventListener('submit', e=>{
+            if(!form.checkValidity())
+            {
+                e.preventDefault()
+            }
+            form.classList.add('was-validated');
+        })
     </script>
 </body>
 
